@@ -5,7 +5,9 @@
 #include<cstdlib>
 #include<iostream>
 #include<cmath>
+#include<ctime>
 using namespace std;
+void rands();
 string sen = "欢迎来到这个MSDOS游戏!";
 int main()
 {
@@ -30,7 +32,7 @@ int main()
 		scanf("%d",&stat);
 		if(stat == 1)
 		{
-
+			rands();
 		}
 		else if(stat == 2)
 		{
@@ -49,4 +51,11 @@ int main()
 		}
 	}
 	return 0;
+}
+
+void rands()
+{
+	int rdm;
+	srand(time(NULL));
+	rdm = rand();
 }
