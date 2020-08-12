@@ -1,4 +1,6 @@
 #include "head.h"
+#include<iostream>
+#include<cstdio>
 using namespace std;
 #ifndef _CPP_CPP_
 #define _CPP_CPP_
@@ -14,11 +16,13 @@ class player : public sprite
     bool newQuest(int id);
     bool fnsQuest(int id);
     int questf(int pos);
+    void listQuest();
 
     private:
     string inv[50];
     int quest[15];
     int isQuestMax();
+    string quests[100] = {"TestQuest"};
 };
 
 bool player::addItem(int pos,string itemName)
@@ -63,8 +67,21 @@ int player::questf(int pos)
     return quest[pos];
 }
 
+void player::listQuest()
+{
+    for(int i=0;i<15;i++)
+    {
+        cout<<quests[quest[i]]<<endl;
+    }
+}
+
 bool player::newQuest(int id)
 {
-
+    if(isQuestMax() != -1)
+    {
+        quest[isQuestMax()+1] = id;
+        return true;
+    }
+    return false;
 }
 #endif

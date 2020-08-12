@@ -9,7 +9,9 @@
 #include<fstream>
 using namespace std;
 void rands();
+void listQuest();
 string sen = "欢迎来到这个MSDOS游戏!";
+player p;
 int main()
 {
 	#define fin cin
@@ -19,13 +21,15 @@ int main()
 	int stat;
 	printf("请输入玩家名!\n");
 	getline(cin,temps);
-	player p;
 	p.upName(temps);
-	ifstream fin("QUEST");
+	ifstream fin("SAVE.file");
+	fin>>temps;
+	p.upName(temps);
 	while(fin>>tempi)
 	{
 		p.newQuest(tempi);
 	}
+	fin.close();
 	system("cls");
 	for(int i=0; i<sen.length(); i++)
 	{
@@ -45,16 +49,18 @@ int main()
 		}
 		else if(stat == 2)
 		{
-
+			listQuest();
 		}
 		else if(stat == 0)
 		{
 			//保存文件
-			ofstream fout("QUEST");
+			ofstream fout("SAVE.file");
+			fout<<p.name<<endl;
 			for(int i=0;i<15;i++)
 			{
 				fout<<p.questf(i)<<"　";
 			}
+			fout<<endl;
 			fout.close();
 			exit(0);
 		}
@@ -73,4 +79,16 @@ void rands()
 	int rdm;
 	srand(time(NULL));
 	rdm = rand();
+	p.newQuest(1);
+	system("pause");
+	system("cls");
+	return;
+}
+
+void listQuest()
+{
+	p.listQuest();
+	system("pause");
+	system("cls");
+	return;
 }
