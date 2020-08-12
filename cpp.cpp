@@ -14,7 +14,7 @@ class player : public sprite
 
     private:
     string inv[50];
-    int quest;
+    int quest[15];
 };
 
 bool player::addItem(int pos,string itemName)

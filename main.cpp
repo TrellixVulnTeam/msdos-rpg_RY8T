@@ -1,6 +1,6 @@
 #include "cpp.cpp"
 #include<Windows.h>
-#include<cstring>
+#include<string>
 #include<cstdio>
 #include<cstdlib>
 #include<iostream>
