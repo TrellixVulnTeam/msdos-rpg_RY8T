@@ -19,7 +19,17 @@ class player : public sprite
 
 bool player::addItem(int pos,string itemName)
 {
-    inv[pos] = itemName;
+    if(inv[pos] != "")
+    {
+        inv[pos] = itemName;
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+    
+    
 }
 
 bool player::delItem(int pos)
