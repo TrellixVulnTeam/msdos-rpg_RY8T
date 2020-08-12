@@ -13,6 +13,7 @@ class player : public sprite
     bool delItem(int pos);
     bool newQuest(int id);
     bool fnsQuest(int id);
+    int questf(int pos);
 
     private:
     string inv[50];
@@ -55,6 +56,11 @@ int player::isQuestMax()
         }
     }
     return -1;
+}
+
+int player::questf(int pos)
+{
+    return quest[pos];
 }
 
 bool player::newQuest(int id)

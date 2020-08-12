@@ -6,17 +6,26 @@
 #include<iostream>
 #include<cmath>
 #include<ctime>
+#include<fstream>
 using namespace std;
 void rands();
 string sen = "欢迎来到这个MSDOS游戏!";
 int main()
 {
-	string temp;
+	#define fin cin
+	#define fout cout
+	string temps;
+	int tempi;
 	int stat;
 	printf("请输入玩家名!\n");
-	getline(cin,temp);
+	getline(cin,temps);
 	player p;
-	p.upName(temp);
+	p.upName(temps);
+	ifstream fin("QUEST");
+	while(fin>>tempi)
+	{
+		p.newQuest(tempi);
+	}
 	system("cls");
 	for(int i=0; i<sen.length(); i++)
 	{
@@ -41,6 +50,12 @@ int main()
 		else if(stat == 0)
 		{
 			//保存文件
+			ofstream fout("QUEST");
+			for(int i=0;i<15;i++)
+			{
+				fout<<p.questf(i)<<"　";
+			}
+			fout.close();
 			exit(0);
 		}
 		else
