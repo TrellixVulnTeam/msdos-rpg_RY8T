@@ -1,12 +1,17 @@
 #include "cpp.cpp"
-#include<windows.h>
+#include<Windows.h>
+#include<cstring>
+#include<cstdio>
+#include<cstdlib>
+#include<iostream>
+#include<cmath>
 using namespace std;
-string sen = "欢迎来到这个MSDOS游戏!";
+string sen = "娆㈣繋鏉ュ埌杩欎釜MSDOS娓告垙!";
 int main()
 {
 	string temp;
 	int stat;
-	printf("请输入玩家名!\n");
+	printf("璇疯緭鍏ョ帺瀹跺悕!\n");
 	getline(cin,temp);
 	player p;
 	p.upName(temp);
@@ -19,8 +24,8 @@ int main()
 	system("cls");
 	while(true)
 	{
-		printf("\t欢迎来到DOS-RPG!\n");
-		printf("操作：\n1、随机领取任务\n2、任务中心\n0、退出\n");
+		printf("\t娆㈣繋鏉ュ埌DOS-RPG!\n");
+		printf("鎿嶄綔锛歕n1銆侀殢鏈洪鍙栦换鍔n2銆佷换鍔′腑蹇僜n0銆侀��鍑篭n");
 		scanf("%d",&stat);
 		if(stat == 1)
 		{
@@ -32,12 +37,12 @@ int main()
 		}
 		else if(stat == 0)
 		{
-			//保存文件
+			//淇濆瓨鏂囦欢
 			exit(0);
 		}
 		else
 		{
-			printf("错误的操作符！\n"); 
+			printf("閿欒鐨勬搷浣滅锛乗n"); 
 			system("pause"); 
 			system("cls");
 		}
