@@ -4,7 +4,8 @@
         "ostream": "cpp",
         "condition_variable": "cpp",
         "future": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "string": "cpp"
     },
     "files.exclude": {
         "**/.classpath": true,
