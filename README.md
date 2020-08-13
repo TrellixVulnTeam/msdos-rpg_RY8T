@@ -15,7 +15,6 @@ main.cpp
 1.  下载本代码仓库（.zip/https/svn/release均可）
 2.  找到main.exe
 3.  运行
-4. （main.cpp.exe为备用文件，也可进行游玩）
 
 #### 使用说明
 
