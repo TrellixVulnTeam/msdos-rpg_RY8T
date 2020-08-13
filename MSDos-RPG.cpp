@@ -86,7 +86,7 @@ void rands()
 	//cout<< rdm <<endl;
 	tempi = rdm%10;
 	p.newQuest(tempi);
-	cout<<"已领取任务: "<<tempi<<endl;
+	cout<<"已领取任务: "<<tempi<<":"<<p.questName(tempi)<<endl;
 	system("pause");
 	system("cls");
 	return;
