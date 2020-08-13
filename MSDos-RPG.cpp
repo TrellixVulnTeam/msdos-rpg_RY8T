@@ -77,10 +77,16 @@ int main()
 
 void rands()
 {
-	int rdm;
+	unsigned rdm;
+	int tempi = 1;
 	srand(time(NULL));
 	rdm = rand();
-	p.newQuest(1);
+	//cout << rand() << endl; 
+	//p.newQuest(1);
+	//cout<< rdm <<endl;
+	tempi = rdm%10;
+	p.newQuest(tempi);
+	cout<<"已领取任务: "<<tempi<<endl;
 	system("pause");
 	system("cls");
 	return;

@@ -22,7 +22,7 @@ class player : public sprite
     string inv[50];
     int quest[15];
     int isQuestMax();
-    string quests[100] = {"","TestQuest"};
+    string quests[100] = {"","TestQuest","NewQuest","3","4","5","quest6","No.7","8","9","10"};
 };
 
 bool player::addItem(int pos,string itemName)
