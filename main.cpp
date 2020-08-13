@@ -40,6 +40,7 @@ int main()
 	while(true)
 	{
 		printf("\t欢迎来到DOS-RPG!\n");
+		cout<<"玩家名:"<<p.name<<endl;
 		printf("操作：\n1、随机领取任务\n2、任务中心\n0、退出\n");
 		printf("请输入操作: ");
 		scanf("%d",&stat);
