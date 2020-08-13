@@ -1,4 +1,4 @@
-#include "head.h"
+#include "../head/sprite.h"
 #include<iostream>
 #include<cstdio>
 using namespace std;
