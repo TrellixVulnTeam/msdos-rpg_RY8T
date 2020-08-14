@@ -4,16 +4,16 @@
 A MSDOS Game
 
 #### 软件架构
-head.h
+sprite.h
    |
-cpp.cpp
+player.cpp
    |
-main.cpp
+MSDos-RPG.cpp
 
 #### 安装教程
 
 1.  下载本代码仓库（.zip/https/svn/release均可）
-2.  找到main.exe
+2.  找到MSDos-RPG.exe
 3.  运行
 
 #### 编译说明
