@@ -1,7 +1,7 @@
 #include<string>
 using namespace std;
-#ifndef _HEAD_H_
-#define _HEAD_H_
+#ifndef _SPRITE_H_
+#define _SPRITE_H_
 
 
 class sprite

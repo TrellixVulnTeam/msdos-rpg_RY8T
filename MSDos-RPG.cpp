@@ -30,6 +30,7 @@ int main()
 		p.newQuest(tempi);
 	}
 	fin.close();
+	#define fin cin
 	system("cls");
 	for(int i=0; i<sen.length(); i++)
 	{
@@ -41,16 +42,16 @@ int main()
 	{
 		printf("\t欢迎来到DOS-RPG!\n");
 		cout<<"玩家名:"<<p.name<<endl;
-		printf("操作：\n1、随机领取任务\n2、任务中心\n0、退出\n");
+		printf("操作：\n1、任务中心\n2、随机领取任务\n0、退出\n");
 		printf("请输入操作: ");
 		scanf("%d",&stat);
 		if(stat == 1)
 		{
-			rands();
+			listQuest();
 		}
 		else if(stat == 2)
 		{
-			listQuest();
+			rands();
 		}
 		else if(stat == 0)
 		{
@@ -61,7 +62,6 @@ int main()
 			{
 				fout<<p.questf(i)<<"　";
 			}
-			fout<<endl;
 			fout.close();
 			exit(0);
 		}
@@ -87,6 +87,7 @@ void rands()
 	tempi = rdm%10;
 	p.newQuest(tempi);
 	cout<<"已领取任务: "<<tempi<<":"<<p.questName(tempi)<<endl;
+	p.checkQuest(tempi);
 	system("pause");
 	system("cls");
 	return;

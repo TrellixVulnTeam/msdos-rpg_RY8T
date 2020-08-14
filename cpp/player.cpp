@@ -2,8 +2,8 @@
 #include<iostream>
 #include<cstdio>
 using namespace std;
-#ifndef _CPP_CPP_
-#define _CPP_CPP_
+#ifndef _PLAYER_CPP_
+#define _PLAYER_CPP_
 
 class player : public sprite
 {
@@ -15,8 +15,11 @@ class player : public sprite
     bool delItem(int pos);
     bool newQuest(int id);
     bool fnsQuest(int id);
+    bool delQuest(int id);
     int questf(int pos);
     void listQuest();
+    string questName(int id);
+    void checkQuest(int id);
 
     private:
     string inv[50];
@@ -75,6 +78,24 @@ void player::listQuest()
     }
 }
 
+string player::questName(int id)
+{
+    return quests[id];
+}
+
+void player::checkQuest(int id)
+{
+    for(int i=0;i<15;i++)
+    {
+        if(quest[i] == id)
+        {
+            delQuest(id);
+            return;
+        }
+    }
+    return;
+}
+
 bool player::newQuest(int id)
 {
     if(isQuestMax() != -1)
@@ -83,5 +104,11 @@ bool player::newQuest(int id)
         return true;
     }
     return false;
+}
+
+bool player::delQuest(int id)
+{
+    quest[id] = 0;
+    return true;
 }
 #endif
