@@ -1,7 +1,7 @@
 #include<string>
 using namespace std;
-#ifndef _HEAD_H_
-#define _HEAD_H_
+#ifndef _SPRITE_H_
+#define _SPRITE_H_
 
 
 class sprite
@@ -18,20 +18,5 @@ class sprite
     void upState(int _state);
     void upName(string name);
 };
-
-void sprite::upName(string _name)
-{
-    name = _name;
-}
-
-void sprite::upHealth(double _health)
-{
-    health = _health;
-}
-
-void sprite::upState(int _state)
-{
-    state = _state;
-}
 
 #endif
