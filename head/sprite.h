@@ -17,6 +17,8 @@ class sprite
     void upHealth(double _health);
     void upState(int _state);
     void upName(string name);
+    int getHealth();
+    int getState();
 };
 
 #endif

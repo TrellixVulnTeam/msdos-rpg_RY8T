@@ -88,4 +88,11 @@ bool player::delQuest(int id)
     quest[id] = 0;
     return true;
 }
+
+bool player::fnsQuest(int id)
+{
+        system("cls");
+        cout<<"任务已完成: "<<id<<" : "<<quests[id]<<endl;
+        system("pause");
+}
 #endif

@@ -41,8 +41,9 @@ int main()
 	system("cls");
 	while(true)
 	{
+		p.upState(1);
 		printf("\t欢迎来到DOS-RPG!\n");
-		cout<<"玩家名:"<<p.name<<endl;
+		//cout<<"玩家名:"<<p.name<<endl;
 		printf("操作：\n1、任务中心\n2、随机领取任务\n0、退出\n");
 		printf("请输入操作: ");
 		scanf("%d",&stat);
