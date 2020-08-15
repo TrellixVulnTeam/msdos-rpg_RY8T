@@ -24,8 +24,8 @@ int main()
 	getline(cin,temps);
 	p.upName(temps);
 	ifstream fin("SAVE.file");
-	fin>>temps;
-	p.upName(temps);
+	//fin>>temps;
+	//p.upName(temps);
 	while(fin>>tempi)
 	{
 		p.newQuest(tempi);
@@ -58,10 +58,10 @@ int main()
 		{
 			//±£´æÎÄ¼ş
 			ofstream fout("SAVE.file");
-			fout<<p.name<<endl;
+			//fout<<p.name<<endl;
 			for(int i=0;i<15;i++)
 			{
-				fout<<p.questf(i)<<"¡¡";
+				fout<<p.questf(i)<<" ";
 			}
 			fout.close();
 			exit(0);
