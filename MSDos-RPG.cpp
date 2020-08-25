@@ -1,13 +1,4 @@
 #include "includeme.h"
-#include<Windows.h>
-#include<string>
-#include<cstdio>
-#include<cstdlib>
-#include<iostream>
-#include<cmath>
-#include<ctime>
-#include<fstream>
-#define _CRT_SECURE_NO_WARNINGS
 using namespace std;
 void rands();
 void listQuest();
