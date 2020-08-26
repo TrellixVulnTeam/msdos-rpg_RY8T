@@ -1,4 +1,6 @@
 #include "includeme.h"
+#define fin cin
+#define fout cout
 using namespace std;
 void rands();
 void listQuest();
@@ -6,8 +8,6 @@ string sen = "欢迎来到这个MSDOS游戏!";
 player p;
 int main()
 {
-	#define fin cin
-	#define fout cout
 	string temps;
 	int tempi;
 	int stat;
