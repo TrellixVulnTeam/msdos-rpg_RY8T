@@ -13,9 +13,11 @@ int main()
 	int stat;
 	printf("请输入玩家名!\n");
 	getline(cin,temps);
-	p.upName(temps);
+	//p.upName(temps);
+	p.name = temps;
 	ifstream fin("SAVE.file");
-	//fin>>temps;
+	fin>>temps;
+	p.name = temps;
 	//p.upName(temps);
 	while(fin>>tempi)
 	{
@@ -34,7 +36,7 @@ int main()
 	{
 		p.upState(1);
 		printf("\t欢迎来到DOS-RPG!\n");
-		//cout<<"玩家名:"<<p.name<<endl;
+		cout<<"玩家名:"<<p.name<<endl;
 		printf("操作：\n1、任务中心\n2、随机领取任务\n0、退出\n");
 		printf("请输入操作: ");
 		scanf("%d",&stat);
@@ -50,12 +52,13 @@ int main()
 		{
 			//保存文件
 			ofstream fout("SAVE.file");
-			//fout<<p.name<<endl;
+			fout<<p.name<<endl;
 			for(int i=0;i<15;i++)
 			{
 				fout<<p.questf(i)<<" ";
 			}
 			fout.close();
+			#define fout cout
 			exit(0);
 		}
 		else
