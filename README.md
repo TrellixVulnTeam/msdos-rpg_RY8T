@@ -23,6 +23,7 @@ includeme.h MSDos-RPG.cpp
 #### 编译说明
 1. 编译本程序时请编译MSDos-RPG.cpp
 2. 本程序支持g++和VC++，cmake未测试
+3. 理论上支持全平台
 
 #### 使用说明
 

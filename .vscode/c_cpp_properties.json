@@ -1,7 +1,7 @@
 {
     "configurations": [
         {
-            "name": "Win32",
+            "name": "Linux And Win32",
             "intelliSenseMode": "clang-x64",
             "includePath": [
                 "${workspaceFolder}",
