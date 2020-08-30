@@ -4,6 +4,7 @@
 using namespace std;
 void rands();
 void listQuest();
+void intomap();
 string sen = "欢迎来到这个MSDOS游戏!";
 player p;
 int main()
@@ -16,7 +17,7 @@ int main()
 	//p.upName(temps);
 	p.name = temps;
 	ifstream fin("SAVE.file");
-	fin>>temps;
+	getline(fin,temps);
 	p.name = temps;
 	//p.upName(temps);
 	while(fin>>tempi)
@@ -37,7 +38,7 @@ int main()
 		p.upState(1);
 		printf("\t欢迎来到DOS-RPG!\n");
 		cout<<"玩家名:"<<p.name<<endl;
-		printf("操作：\n1、任务中心\n2、随机领取任务\n0、退出\n");
+		printf("操作：\n1、任务中心\n2、随机领取任务\n3、进入地图\n0、退出\n");
 		printf("请输入操作: ");
 		scanf("%d",&stat);
 		if(stat == 1)
@@ -47,6 +48,10 @@ int main()
 		else if(stat == 2)
 		{
 			rands();
+		}
+		else if(stat == 3)
+		{
+			intomap();
 		}
 		else if(stat == 0)
 		{
@@ -95,4 +100,25 @@ void listQuest()
 	system("pause");
 	system("cls");
 	return;
+}
+
+void intomap()
+{
+	int stat;
+	system("cls");
+	printf("-1、测试\n0、返回主界面");
+	scanf("%d",&stat);
+	if(stat == -1)
+	{
+		//进入测试地图
+	}
+	else if(stat == 0)
+	{
+		system("cls");
+		return;
+	}
+	else
+	{
+		printf("无该地图！\n");
+	}
 }
