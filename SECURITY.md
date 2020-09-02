@@ -9,8 +9,6 @@
 
 ##报告漏洞
 
-Use this section to tell people how to report a vulnerability.
+这里可以报告漏洞，如你多久可以期望获得一次更新
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+报告的漏洞，如果该漏洞被接受，将会尽快修复。
