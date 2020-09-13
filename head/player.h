@@ -1,4 +1,4 @@
-#include "sprite.h"
+#include "../cpp/sprite.cpp"
 using namespace std;
 #ifndef _PLAYER_H_
 #define _PLAYER_H_

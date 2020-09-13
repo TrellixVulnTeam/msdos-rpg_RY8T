@@ -92,7 +92,7 @@ bool player::delQuest(int id)
 bool player::fnsQuest(int id)
 {
         system("cls");
-        cout<<"ä»»åŠ¡å·²å®Œæˆ: "<<id<<" : "<<quests[id]<<endl;
+        cout<<"ÈÎÎñÒÑÍê³É: "<<id<<" : "<<quests[id]<<endl;
         system("pause");
 }
 #endif

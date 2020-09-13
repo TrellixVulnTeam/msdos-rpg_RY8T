@@ -12,8 +12,8 @@ class sprite
     string name;
 
     public:
-    sprite() {}
-    ~sprite() {}
+    sprite();
+    ~sprite();
     void upHealth(double _health);
     void upState(int _state);
     void upName(string name);
