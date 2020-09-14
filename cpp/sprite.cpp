@@ -35,6 +35,16 @@ void sprite::upState(int _state)
     state = _state;
 }
 
+void sprite::upATK(int _ATK)
+{
+    ATK = _ATK;
+}
+
+void sprite::upDEF(int _DEF)
+{
+    DEF = _DEF;
+}
+
 int sprite::getHealth()
 {
     return health;
@@ -44,4 +54,15 @@ int sprite::getState()
 {
     return state;
 }
+
+int sprite::getATK()
+{
+    return ATK;
+}
+
+int sprite::getDEF()
+{
+    return DEF;
+}
+
 #endif
