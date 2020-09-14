@@ -3,9 +3,11 @@ using namespace std;
 #ifndef _SPRITE_CPP_
 #define _SPRITE_CPP_
 
-sprite::sprite()
+sprite::sprite(int _ATK,int _DEF)
 {
     upState(1);
+    upATK(_ATK);
+    upDEF(_DEF);
     while(getState() == 0)
     {
         if(getHealth() <= 0)
