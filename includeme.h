@@ -9,6 +9,11 @@
 #include<cmath>
 #include<ctime>
 #include<fstream>
+#include<algorithm>
+#include<list>
+#include<stack>
+#include<queue>
+#include<map>
 #include "head/sprite.h"
 #include "head/player.h"
 #include "head/enemy.h"
