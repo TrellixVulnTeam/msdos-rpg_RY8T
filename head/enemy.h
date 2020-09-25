@@ -7,7 +7,7 @@ using namespace std;
 class enemy : public sprite
 {
     public:
-    enemy();
+    enemy(player);
     ~enemy();
     bool dead();
 

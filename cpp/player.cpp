@@ -5,6 +5,17 @@ using namespace std;
 #ifndef _PLAYER_CPP_
 #define _PLAYER_CPP_
 
+player::player()
+{
+
+}
+
+player::~player()
+{
+
+    
+}
+
 bool player::addItem(int pos,string itemName)
 {
     if(inv[pos] == "")
@@ -45,6 +56,17 @@ int player::isQuestMax()
 int player::questf(int pos)
 {
     return quest[pos];
+}
+
+int player::emptyPos()
+{
+    for(int i=0;i<50;i++)
+    {
+        if(inv[i]=="" || inv[i]==" ")
+        {
+            return i;
+        }
+    }
 }
 
 void player::listQuest()

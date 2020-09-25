@@ -5,8 +5,8 @@ using namespace std;
 class player : public sprite
 {
     public:
-    player() {}
-    ~player() {}
+    player();
+    ~player();
     string name;
     bool addItem(int pos,string itemName);
     bool delItem(int pos);
@@ -14,6 +14,7 @@ class player : public sprite
     bool fnsQuest(int id);
     bool delQuest(int id);
     int questf(int pos);
+    int emptyPos();
     void listQuest();
     string questName(int id);
     void checkQuest(int id);

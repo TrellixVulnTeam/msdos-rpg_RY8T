@@ -14,6 +14,7 @@ class sprite
     int DEF;
 
     public:
+    sprite();
     sprite(int _ATK,int _DEF);
     ~sprite();
     void upHealth(double _health);

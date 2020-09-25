@@ -1,11 +1,12 @@
 #include "../head/enemy.h"
+#include "player.cpp"
 #include<iostream>
 #include<cstdio>
 using namespace std;
 #ifndef _ENEMY_CPP_
 #define _ENEMY_CPP_
 
-enemy::enemy()
+enemy::enemy(player pl)
 {
     upState(1);
     while(getState() == 0)
@@ -19,14 +20,14 @@ enemy::enemy()
     {
         for(int i=0;i<10;i++)
         {
-            player::addItem(item[i]);
+            pl.addItem(pl.emptyPos(),item[i]);
         }
     }
 }
 
 bool enemy::dead()
 {
-    if(state == 0)
+    if(getState() == 0)
     {
         return true;
     }

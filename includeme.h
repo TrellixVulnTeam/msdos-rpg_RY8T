@@ -11,7 +11,9 @@
 #include<fstream>
 #include "head/sprite.h"
 #include "head/player.h"
+#include "head/enemy.h"
 #include "cpp/sprite.cpp"
 #include "cpp/player.cpp"
+#include "cpp/enemy.cpp"
 
 #endif

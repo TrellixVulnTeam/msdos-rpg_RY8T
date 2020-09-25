@@ -3,6 +3,11 @@ using namespace std;
 #ifndef _SPRITE_CPP_
 #define _SPRITE_CPP_
 
+sprite::sprite()
+{
+    
+}
+
 sprite::sprite(int _ATK,int _DEF)
 {
     upState(1);
