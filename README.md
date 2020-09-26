@@ -1,6 +1,8 @@
-﻿# MSDOS-RPG
+# MSDOS-RPG
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/GLgele/msdos-rpg?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/GLgele/msdos-rpg?style=social)
+![GitHub forks](https://img.shields.io/github/forks/GLgele/msdos-rpg?style=social)
 
 #### 介绍
 A MSDOS Game
