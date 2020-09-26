@@ -8,14 +8,14 @@
 A MSDOS Game
 
 #### 软件架构
-sprite.h → sprite.cpp
+sprite.h → sprite.cpp → enemy.h
+
+        ↓                  ↓ 
+
+player.h → player.cpp   enemy.cpp
 
         ↓
-        
-player.h → player.cpp
 
-        ↓
-        
 includeme.h → MSDos-RPG.cpp
 
 #### 安装教程
