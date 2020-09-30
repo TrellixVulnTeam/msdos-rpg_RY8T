@@ -4,6 +4,9 @@
 ![GitHub watchers](https://img.shields.io/github/watchers/GLgele/msdos-rpg?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/GLgele/msdos-rpg?style=social)
 
+[![star](https://gitee.com/GLgele/msdos-game/badge/star.svg?theme=white)](https://gitee.com/GLgele/msdos-game/stargazers)
+[![fork](https://gitee.com/GLgele/msdos-game/badge/fork.svg?theme=white)](https://gitee.com/GLgele/msdos-game/members)
+
 #### 介绍
 A MSDOS Game
 
