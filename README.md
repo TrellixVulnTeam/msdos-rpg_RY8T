@@ -11,15 +11,7 @@
 A MSDOS Game
 
 #### 软件架构
-sprite.h → sprite.cpp → enemy.h
-
-        ↓                  ↓ 
-
-player.h → player.cpp   enemy.cpp
-
-        ↓
-
-includeme.h → MSDos-RPG.cpp
+![架构](jiagou.png)
 
 #### 安装教程
 
