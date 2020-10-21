@@ -11,7 +11,7 @@
 A MSDOS Game
 
 #### 软件架构
-![架构](jiagou.png)
+![架构](img/jiagou.png)
 
 #### 安装教程
 
