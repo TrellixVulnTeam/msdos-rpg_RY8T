@@ -45,3 +45,7 @@ includeme.h → MSDos-RPG.cpp
 3.  提交代码
 4.  新建 Pull Request
 5.  若审核通过，您也将成为MSDOS-GAME的贡献者之一！
+
+#### Wiki
+
+1. [Wiki](https://github.com/GLgele/msdos-rpg/wiki)
