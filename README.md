@@ -4,6 +4,9 @@
 ![GitHub watchers](https://img.shields.io/github/watchers/GLgele/msdos-rpg?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/GLgele/msdos-rpg?style=social)
 
+[![star](https://gitee.com/GLgele/msdos-game/badge/star.svg?theme=white)](https://gitee.com/GLgele/msdos-game/stargazers)
+[![fork](https://gitee.com/GLgele/msdos-game/badge/fork.svg?theme=white)](https://gitee.com/GLgele/msdos-game/members)
+
 #### 介绍
 A MSDOS Game
 
@@ -42,3 +45,7 @@ includeme.h → MSDos-RPG.cpp
 3.  提交代码
 4.  新建 Pull Request
 5.  若审核通过，您也将成为MSDOS-GAME的贡献者之一！
+
+#### Wiki
+
+1. [Wiki](https://github.com/GLgele/msdos-rpg/wiki)

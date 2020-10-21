@@ -1,7 +1,7 @@
 {
     "configurations": [
         {
-            "name": "Linux And Win32",
+            "name": "Win32",
             "intelliSenseMode": "clang-x64",
             "includePath": [
                 "${workspaceFolder}",
@@ -34,6 +34,41 @@
             "cStandard": "c11",
             "cppStandard": "c++11",
             "compilerPath": "E:/C++/C++/Dev-Cpp/MinGW64/bin/g++.exe"
+        },
+        {
+            "name": "Win32b",
+            "intelliSenseMode": "clang-x64",
+            "includePath": [
+                "${workspaceFolder}",
+                "D:/C++/C++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++",
+                "D:/C++/C++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++/x86_64-w64-mingw32",
+                "D:/C++/C++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++/backward",
+                "D:/C++/C++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include",
+                "D:/C++/C++/Dev-Cpp/MinGW64/include",
+                "D:/C++/C++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include-fixed"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "__GNUC__=7",
+                "__cdecl=__attribute__((__cdecl__))"
+            ],
+            "browse": {
+                "path": [
+                    "${workspaceFolder}",
+                    "D:/C++/C++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++",
+                    "D:/C++/C++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++/x86_64-w64-mingw32",
+                    "D:/C++/C++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++/backward",
+                    "D:/C++/C++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include",
+                    "D:/C++/C++/Dev-Cpp/MinGW64/include",
+                    "D:/C++/C++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include-fixed"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            },
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "compilerPath": "D:/C++/C++/Dev-Cpp/MinGW64/bin/g++.exe"
         }
     ],
     "version": 4
