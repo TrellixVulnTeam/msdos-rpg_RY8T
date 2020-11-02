@@ -20,5 +20,6 @@
 #include "cpp/sprite.cpp"
 #include "cpp/player.cpp"
 #include "cpp/enemy.cpp"
+#include "head/item.h"
 
 #endif

@@ -7,6 +7,7 @@ void listQuest();
 void intomap();
 string sen = "欢迎来到这个MSDOS游戏!";
 player p;
+int* ip = NULL;		//调用item的getAdds和getSpecails
 int main()
 {
 	string temps;
