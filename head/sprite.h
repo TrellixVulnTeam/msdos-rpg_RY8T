@@ -17,11 +17,11 @@ class sprite
     sprite();
     sprite(int _ATK,int _DEF);
     ~sprite();
-    void upHealth(double _health);
-    void upState(int _state);
-    void upName(string name);
-    void upATK(int _ATK);
-    void upDEF(int _DEF);
+    void setHealth(double _health);
+    void setState(int _state);
+    void setName(string name);
+    void setATK(int _ATK);
+    void setDEF(int _DEF);
     int getHealth();
     int getState();
     int getATK();

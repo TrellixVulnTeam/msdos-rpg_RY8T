@@ -8,12 +8,12 @@ using namespace std;
 
 enemy::enemy(player pl)
 {
-    upState(1);
+    setState(1);
     while(getState() == 0)
     {
         if(getHealth() <= 0)
         {
-            upState(0);
+            setState(0);
         }
     }
     if(dead())

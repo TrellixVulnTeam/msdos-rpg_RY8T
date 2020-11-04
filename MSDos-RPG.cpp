@@ -15,12 +15,12 @@ int main()
 	int stat;
 	printf("请输入玩家名!\n");
 	getline(cin,temps);
-	//p.upName(temps);
+	//p.setName(temps);
 	p.name = temps;
 	ifstream fin("SAVE.file");
 	getline(fin,temps);
 	p.name = temps;
-	//p.upName(temps);
+	//p.setName(temps);
 	while(fin>>tempi)
 	{
 		p.newQuest(tempi);
@@ -36,7 +36,7 @@ int main()
 	system("cls");
 	while(true)
 	{
-		p.upState(1);
+		p.setState(1);
 		printf("\t欢迎来到DOS-RPG!\n");
 		cout<<"玩家名:"<<p.name<<endl;
 		printf("操作：\n1、任务中心\n2、随机领取任务\n3、进入地图\n0、退出\n");
