@@ -6,7 +6,12 @@ using namespace std;
 item::item(string id)
 {
     sid = id;
-    upName();
+    setName();
+}
+
+item::item()
+{
+    
 }
 
 item::~item()
@@ -14,7 +19,7 @@ item::~item()
 
 }
 
-void item::upName()
+void item::setName()
 {
     int i;
     for(i=0;i<=999;i++)

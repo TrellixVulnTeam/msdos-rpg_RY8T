@@ -21,6 +21,7 @@ bool player::addItem(int pos,string itemName)
     if(inv[pos] == "")
     {
         inv[pos] = itemName;
+        _INV[pos] = item(itemName);
         return true;
     }
     else
@@ -36,6 +37,7 @@ bool player::delItem(int pos)
     if(inv[pos] != "")
     {
         inv[pos] = "";
+        _INV[pos] = item("");
         return true;
     }
     return false;

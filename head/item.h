@@ -19,8 +19,9 @@ class item
 
     public:
     item(string);
+    item();
     ~item();
-    void upName();
+    void setName();
     string getName();
     string getSid();
     int getNid();
