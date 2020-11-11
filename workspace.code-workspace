@@ -39,6 +39,7 @@
 			"new": "cpp",
 			"streambuf": "cpp",
 			"type_traits": "cpp"
-		}
+		},
+		"files.encoding": "gbk"
 	}
 }
