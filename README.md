@@ -8,7 +8,8 @@
 [![fork](https://gitee.com/GLgele/msdos-game/badge/fork.svg?theme=white)](https://gitee.com/GLgele/msdos-game/members)
 
 #### 介绍
-A MSDOS Game
+一个控制台游戏
+Or a game engine...?
 
 #### 软件架构
 ![架构](img/jiagou.png)
