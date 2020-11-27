@@ -10,6 +10,7 @@ player p;
 int* ip = NULL;		//调用item的getAdds和getSpecails
 int main()
 {
+	GameInit();
 	string temps;
 	int tempi;
 	int stat;
