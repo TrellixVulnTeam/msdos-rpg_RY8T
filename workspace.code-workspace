@@ -40,6 +40,17 @@
 			"streambuf": "cpp",
 			"type_traits": "cpp"
 		},
-		"files.encoding": "gbk"
+		"files.encoding": "gbk",
+		"cSpell.userWords": [
+			"Hanler",
+			"INCLUDEME",
+			"MSDOS",
+			"PHANDLER",
+			"cmake",
+			"earraylate",
+			"fout",
+			"minecraft",
+			"nids"
+		],
 	}
 }
