@@ -5,6 +5,7 @@ using namespace std;
 void GameInit();
 bool ctrlhandler(DWORD);
 void GameExit();
+void setPos(int,int);
 void rands();
 void listQuest();
 void intomap();
@@ -30,17 +31,21 @@ int main()
 		p.newQuest(tempi);
 	}
 	fin.close();
-#define fin cin
+	#define fin cin
 	system("cls");
+	setPos(32,32);
 	for (int i = 0; i < sen.length(); i++)
 	{
 		cout << sen[i];
 		Sleep(100);
 	}
+	setPos(32,25);
+	system("pause");
 	system("cls");
 	while (true)
 	{
 		p.setState(1);
+		setPos(32,0);
 		printf("\t欢迎来到DOS-RPG!\n");
 		cout << "玩家名:" << p.name << endl;
 		printf("操作：\n1、任务中心\n2、随机领取任务\n3、进入地图\n0、退出\n");
@@ -61,15 +66,16 @@ int main()
 		else if (stat == 0)
 		{
 			//保存文件
-			ofstream fout("SAVE.file");
+			/*ofstream fout("SAVE.file");
 			fout << p.name << endl;
 			for (int i = 0; i < 15; i++)
 			{
 				fout << p.questf(i) << " ";
 			}
 			fout.close();
-#define fout cout
-			exit(0);
+			#define fout cout
+			exit(0);*/
+			GameExit();
 		}
 		else
 		{
@@ -130,6 +136,7 @@ void intomap()
 
 void GameInit()
 {
+	system("mode con cols=100 lines=30");
 	printf("正在启动游戏...\n");
 	Sleep(500);
 	if (SetConsoleCtrlHandler((PHANDLER_ROUTINE)ctrlhandler, true))
@@ -188,6 +195,16 @@ bool ctrlhandler(DWORD fdwctrltype)
 	default:
 		return false;
 	}
+}
+
+void setPos(int x,int y)//设置光标位置
+{
+    COORD pos;
+	HANDLE hOutput;
+    pos.X=x;
+    pos.Y=y;
+    hOutput=GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleCursorPosition(hOutput,pos);
 }
 
 void GameExit()
