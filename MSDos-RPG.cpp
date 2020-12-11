@@ -167,7 +167,8 @@ bool ctrlhandler(DWORD fdwctrltype)
 	// handle the ctrl-c signal.
 	case CTRL_C_EVENT:
 		//printf( "ctrl-c event\n\n" );
-		GameExit();
+		//GameExit();
+		MessageBox(NULL,TEXT("请不要使用Ctrl-C关闭游戏！"),TEXT("Msdos-RPG"),MB_OK|MB_ICONWARNING);
 		return true;
 
 	// ctrl-close: confirm that the user wants to exit.
