@@ -11,7 +11,7 @@ void listQuest();
 void intomap();
 string sen = "欢迎来到这个MSDOS游戏!";
 player p;
-int *ip = NULL; //调用item的getAdds和getSpecails
+int* ip = NULL; //调用item的getAdds和getSpecails
 int main()
 {
 	GameInit();
@@ -169,7 +169,7 @@ bool ctrlhandler(DWORD fdwctrltype)
 		//printf( "ctrl-c event\n\n" );
 		//GameExit();
 		MessageBox(NULL,TEXT("请不要使用Ctrl-C关闭游戏！"),TEXT("Msdos-RPG"),MB_OK|MB_ICONWARNING);
-		return true;
+		return false;
 
 	// ctrl-close: confirm that the user wants to exit.
 	case CTRL_CLOSE_EVENT:
@@ -180,7 +180,8 @@ bool ctrlhandler(DWORD fdwctrltype)
 	// pass other signals to the next handler.
 	case CTRL_BREAK_EVENT:
 		//printf( "ctrl-break event\n\n" );
-		GameExit();
+		//GameExit();
+		MessageBox(NULL,TEXT("请不要强制退出游戏！"),TEXT("Msdos-RPG"),MB_OK|MB_ICONWARNING);
 		return false;
 
 	case CTRL_LOGOFF_EVENT:
