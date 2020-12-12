@@ -154,7 +154,7 @@ void GameInit()
 	}
 	else
 	{
-		printf("\nFatal致命错误:无法设置控件处理程序(Control Handler)\n");
+		MessageBox(NULL,TEXT("\nFatal致命错误:无法设置控件处理程序(Control Handler)\n"),TEXT("Msdos-RPG"),MB_OK|MB_ICONERROR);
 		system("pause");
 		exit(1);
 	}
