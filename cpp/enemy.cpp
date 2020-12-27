@@ -6,7 +6,7 @@ using namespace std;
 #ifndef _ENEMY_CPP_
 #define _ENEMY_CPP_
 
-enemy::enemy(player pl)
+enemy::enemy(player &pl)
 {
     setState(1);
     while(getState() == 0)
