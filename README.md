@@ -39,7 +39,7 @@ Or a game engine...?
 2.  新建分支
 3.  提交代码
 4.  新建 Pull Request
-5.  若审核通过，您也将成为MSDOS-GAME的贡献者之一！
+5.  若审核通过，您也将成为MSDOS-RPG的贡献者之一！
 
 #### Wiki
 
