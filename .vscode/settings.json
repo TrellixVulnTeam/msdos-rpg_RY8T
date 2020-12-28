@@ -17,7 +17,22 @@
         "stdexcept": "cpp",
         "system_error": "cpp",
         "regex": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "cctype": "cpp",
+        "clocale": "cpp",
+        "cmath": "cpp",
+        "cstdarg": "cpp",
+        "cstdint": "cpp",
+        "cstdio": "cpp",
+        "cstdlib": "cpp",
+        "ctime": "cpp",
+        "cwchar": "cpp",
+        "cwctype": "cpp",
+        "initializer_list": "cpp",
+        "limits": "cpp",
+        "new": "cpp",
+        "streambuf": "cpp",
+        "type_traits": "cpp"
     },
     "files.exclude": {
         "**/.classpath": true,

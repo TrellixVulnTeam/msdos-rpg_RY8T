@@ -10,13 +10,22 @@ class sprite
     int state;
     double health;
     string name;
+    int ATK;
+    int DEF;
 
     public:
-    sprite() {}
-    ~sprite() {}
-    void upHealth(double _health);
-    void upState(int _state);
-    void upName(string name);
+    sprite();
+    sprite(int _ATK,int _DEF);
+    ~sprite();
+    void setHealth(double _health);
+    void setState(int _state);
+    void setName(string name);
+    void setATK(int _ATK);
+    void setDEF(int _DEF);
+    int getHealth();
+    int getState();
+    int getATK();
+    int getDEF();
 };
 
 #endif

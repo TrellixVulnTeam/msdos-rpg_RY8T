@@ -5,11 +5,23 @@ using namespace std;
 #ifndef _PLAYER_CPP_
 #define _PLAYER_CPP_
 
+player::player()
+{
+
+}
+
+player::~player()
+{
+
+    
+}
+
 bool player::addItem(int pos,string itemName)
 {
     if(inv[pos] == "")
     {
         inv[pos] = itemName;
+        _INV[pos] = item(itemName);
         return true;
     }
     else
@@ -25,6 +37,7 @@ bool player::delItem(int pos)
     if(inv[pos] != "")
     {
         inv[pos] = "";
+        _INV[pos] = item("");
         return true;
     }
     return false;
@@ -45,6 +58,17 @@ int player::isQuestMax()
 int player::questf(int pos)
 {
     return quest[pos];
+}
+
+int player::emptyPos()
+{
+    for(int i=0;i<50;i++)
+    {
+        if(inv[i]=="" || inv[i]==" ")
+        {
+            return i;
+        }
+    }
 }
 
 void player::listQuest()
@@ -87,5 +111,12 @@ bool player::delQuest(int id)
 {
     quest[id] = 0;
     return true;
+}
+
+bool player::fnsQuest(int id)
+{
+        system("cls");
+        cout<<"任务已完成: "<<id<<" : "<<quests[id]<<endl;
+        system("pause");
 }
 #endif

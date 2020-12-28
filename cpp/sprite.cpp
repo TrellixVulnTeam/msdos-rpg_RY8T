@@ -3,19 +3,73 @@ using namespace std;
 #ifndef _SPRITE_CPP_
 #define _SPRITE_CPP_
 
-void sprite::upName(string _name)
+sprite::sprite()
+{
+    
+}
+
+sprite::sprite(int _ATK,int _DEF)
+{
+    setState(1);
+    setATK(_ATK);
+    setDEF(_DEF);
+    while(getState() == 0)
+    {
+        if(getHealth() <= 0)
+        {
+            setState(0);
+        }
+    }
+}
+
+sprite::~sprite()
+{
+    
+}
+
+void sprite::setName(string _name)
 {
     name = _name;
 }
 
-void sprite::upHealth(double _health)
+void sprite::setHealth(double _health)
 {
     health = _health;
 }
 
-void sprite::upState(int _state)
+void sprite::setState(int _state)
 {
     state = _state;
+}
+
+void sprite::setATK(int _ATK)
+{
+    ATK = _ATK;
+}
+
+void sprite::setDEF(int _DEF)
+{
+    DEF = _DEF;
+}
+
+int sprite::getHealth()
+{
+    return health;
+}
+
+int sprite::getState()
+{
+    return state;
+}
+
+int sprite::getATK()
+{
+    return ATK;
+}
+
+int sprite::getDEF()
+{
+    return DEF;
 }
 
 #endif
