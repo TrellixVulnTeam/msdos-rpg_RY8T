@@ -9,7 +9,7 @@ void setPos(int,int);
 void rands();
 void listQuest();
 void intomap();
-const int monsters = 1;
+const int events = 2;
 string sen = "欢迎来到这个MSDOS游戏!";
 player p;
 int* ip = NULL; //调用item的getAdds和getSpecails
@@ -138,7 +138,7 @@ void intomap()
 			//刷怪
 			srand(time(NULL));
 			rdm = rand();
-			tempi = rdm % monsters;
+			tempi = rdm % events;
 		}
 		else
 		{
