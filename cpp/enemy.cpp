@@ -25,6 +25,11 @@ enemy::enemy(player &pl)
     }
 }
 
+enemy::~enemy()
+{
+
+}
+
 bool enemy::dead()
 {
     if(getState() == 0)
