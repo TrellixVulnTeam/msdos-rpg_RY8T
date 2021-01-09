@@ -6,14 +6,19 @@ void GameInit();
 bool ctrlhandler(DWORD);
 void GameExit();
 void setPos(int, int);
+void randi(int, int);
 void rands();
 void listQuest();
 void intomap();
 const int events = 2;
-string title;
+string title = "";
 string sen = "欢迎来到这个MSDOS游戏!";
 player p;
+int prdm = 0;	//调用Python用
 int *ip = NULL; //调用item的getAdds和getSpecails
+//PyObject *pMod = NULL;
+//PyObject *pFunc = NULL;
+//PyObject *result = NULL;
 int main()
 {
 	GameInit();
@@ -48,7 +53,7 @@ int main()
 	{
 		p.setState(1);
 		setPos(32, 0);
-		printf("\t欢迎来到%s!\n",title.c_str());
+		printf("\t欢迎来到%s!\n", title.c_str());
 		cout << "玩家名:" << p.name << endl;
 		printf("操作：\n1、任务中心\n2、随机领取任务\n3、进入地图\n0、退出\n");
 		printf("请输入操作: ");
@@ -160,8 +165,8 @@ void intomap()
 void GameInit()
 {
 	ifstream inSets("settings.ini");
-	getline(inSets,title);
-	string temps="title ";
+	getline(inSets, title);
+	string temps = "title ";
 	temps += title;
 	system("mode con cols=100 lines=30");
 	system(temps.c_str());
@@ -186,6 +191,8 @@ void GameInit()
 		system("pause");
 		exit(1);
 	}
+	//Py_Initialize();
+	//pMod = PyImport_ImportModule("rand");
 }
 
 bool ctrlhandler(DWORD fdwctrltype)
@@ -227,6 +234,26 @@ bool ctrlhandler(DWORD fdwctrltype)
 	}
 }
 
+/*void randi(int a, int b)
+{
+	string temps = "rnd(";
+	temps += a;
+	temps += ",";
+	temps += b;
+	temps += ")";
+	if (pMod)
+	{
+		//获取函数地址
+		pFunc = PyObject_GetAttrString(pMod, temps.c_str());
+		if (pFunc)
+		{
+			result = PyEval_CallFunction(pFunc, NULL);
+		}
+		//换回类型转换
+		PyArg_Parse(result, "i", &prdm);
+	}
+}*/
+
 void setPos(int x, int y) //设置光标位置
 {
 	COORD pos;
@@ -249,5 +276,6 @@ void GameExit()
 	}
 	fout.close();
 #define fout cout
+	//Py_Finalize();
 	exit(0);
 }

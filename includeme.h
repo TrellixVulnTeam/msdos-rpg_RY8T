@@ -14,6 +14,7 @@
 #include<stack>
 #include<queue>
 #include<map>
+//#include<Python.h>
 #include "head/sprite.h"
 #include "head/player.h"
 #include "head/enemy.h"
