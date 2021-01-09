@@ -38,7 +38,9 @@
 			"limits": "cpp",
 			"new": "cpp",
 			"streambuf": "cpp",
-			"type_traits": "cpp"
+			"type_traits": "cpp",
+			"random": "cpp",
+			"stack": "cpp"
 		},
 		"files.encoding": "gbk",
 		"cSpell.userWords": [

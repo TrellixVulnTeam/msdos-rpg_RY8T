@@ -14,6 +14,7 @@
 #include<stack>
 #include<queue>
 #include<map>
+#include<random>
 //#include<Python.h>
 #include "head/sprite.h"
 #include "head/player.h"
