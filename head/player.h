@@ -9,7 +9,7 @@ class player : public sprite
     player();
     ~player();
     string name;
-    bool addItem(int pos,string itemName);
+    bool addItem(int pos, string itemName);
     bool delItem(int pos);
     bool newQuest(int id);
     bool fnsQuest(int id);
@@ -19,12 +19,13 @@ class player : public sprite
     void listQuest();
     string questName(int id);
     void checkQuest(int id);
+    int isQuestMax();
 
     private:
     string inv[50];
     item _INV[50];
     int quest[15];
-    int isQuestMax();
-    string quests[100] = {"","TestQuest","NewQuest","3","4","5","quest6","No.7","8","9","10"};
+
+    string quests[100] = {"", "TestQuest", "NewQuest", "3", "4", "5", "quest6", "No.7", "8", "9", "10"};
 };
 #endif

@@ -6,7 +6,7 @@ void GameInit();
 bool ctrlhandler(DWORD);
 void GameExit();
 void setPos(int, int);
-void randi(int, int);
+int randi(int, int);
 void rands();
 void listQuest();
 void intomap();
@@ -96,6 +96,7 @@ int main()
 
 void rands()
 {
+	/*
 	unsigned rdm;
 	int tempi = 1;
 	srand(time(NULL));
@@ -104,9 +105,18 @@ void rands()
 	//p.newQuest(1);
 	//cout<< rdm <<endl;
 	tempi = rdm % 10;
-	p.newQuest(tempi);
-	cout << "已领取任务: " << tempi << ":" << p.questName(tempi) << endl;
-	p.checkQuest(tempi);
+	*/
+	if (p.isQuestMax() < 1)
+	{
+		int tempi = randi(1, 10);
+		p.newQuest(tempi);
+		cout << "已领取任务: " << tempi << ":" << p.questName(tempi) << endl;
+		p.checkQuest(tempi);
+	}
+	else
+	{
+		cout<<"你当前已有任务！请先完成你的任务"<<endl;
+	}
 	system("pause");
 	system("cls");
 	return;
@@ -253,6 +263,17 @@ bool ctrlhandler(DWORD fdwctrltype)
 		PyArg_Parse(result, "i", &prdm);
 	}
 }*/
+
+int randi(int a, int b)
+{
+	int t = abs(a - b) + 1;
+	unsigned rdm;
+	int tempi = 1;
+	srand(time(NULL));
+	rdm = rand();
+	tempi = rdm % t;
+	return tempi;
+}
 
 void setPos(int x, int y) //设置光标位置
 {
