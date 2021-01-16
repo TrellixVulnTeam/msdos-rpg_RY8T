@@ -3,6 +3,7 @@
 #define fout cout
 #pragma comment(lib,"libs/python/libs/python3.lib")
 #pragma comment(lib,"libs/python/libs/python37.lib")
+#pragma comment(lib,"libs/python/libs/_tkinter.lib")
 using namespace std;
 void GameInit();
 bool ctrlhandler(DWORD);
