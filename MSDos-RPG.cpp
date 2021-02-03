@@ -59,7 +59,7 @@ int main()
 		p.setState(1);
 		setPos(32, 0);
 		printf("\t欢迎来到%s!\n", title.c_str());
-		cout << "玩家名:" << p.name << endl;
+		printf("玩家名：%s\n",p.name.c_str());
 		printf("操作：\n1、任务中心\n2、随机领取任务\n3、进入地图\n0、退出\n");
 		printf("请输入操作: ");
 		scanf("%d", &stat);
