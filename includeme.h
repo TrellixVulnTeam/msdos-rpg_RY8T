@@ -22,9 +22,11 @@
 #include "head/player.h"
 #include "head/enemy.h"
 #include "head/item.h"
+#include "head/map.h"
 #include "cpp/sprite.cpp"
 #include "cpp/player.cpp"
 #include "cpp/enemy.cpp"
 #include "cpp/item.cpp"
+#include "cpp/map.cpp"
 
 #endif

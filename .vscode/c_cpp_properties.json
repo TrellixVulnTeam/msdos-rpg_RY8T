@@ -35,7 +35,8 @@
             },
             "cStandard": "c11",
             "cppStandard": "c++11",
-            "compilerPath": "E:/C++/C++/Dev-Cpp/MinGW64/bin/g++.exe"
+            "compilerPath": "E:/C++/C++/Dev-Cpp/MinGW64/bin/g++.exe",
+            "configurationProvider": "ms-vscode.cmake-tools"
         },
         {
             "name": "Win32b",

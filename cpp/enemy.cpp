@@ -1,5 +1,5 @@
 #include "../head/enemy.h"
-#include "player.cpp"
+#include "../cpp/player.cpp"
 #include<iostream>
 #include<cstdio>
 using namespace std;
