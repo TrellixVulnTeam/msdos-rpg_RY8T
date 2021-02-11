@@ -1,18 +1,15 @@
 #include "../head/player.h"
-#include<iostream>
-#include<cstdio>
+
 using namespace std;
-#ifndef _PLAYER_CPP_
-#define _PLAYER_CPP_
+
 
 player::player()
 {
-
+    
 }
 
 player::~player()
 {
-
     
 }
 
@@ -118,5 +115,5 @@ bool player::fnsQuest(int id)
         system("cls");
         cout<<"任务已完成: "<<id<<" : "<<quests[id]<<endl;
         system("pause");
+        return true;
 }
-#endif

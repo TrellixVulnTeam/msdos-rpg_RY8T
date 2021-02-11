@@ -1,5 +1,7 @@
-#include "../cpp/sprite.cpp"
-#include "../cpp/player.cpp"
+#include "../head/sprite.h"
+#include "../head/item.h"
+#include "../head/player.h"
+
 using namespace std;
 #ifndef _ENEMY_H_
 #define _ENEMY_H_
@@ -7,13 +9,15 @@ using namespace std;
 class enemy : public sprite
 {
     public:
+    enemy();
     enemy(player &pl);
     ~enemy();
-    bool dead();
+    bool isDead();
 
     private:
-    string item[10];
-    string armor[10];
+    string _item[10];
+    string _armor[10];
 };
+
 
 #endif

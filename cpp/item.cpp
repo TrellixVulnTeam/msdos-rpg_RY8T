@@ -1,7 +1,6 @@
 #include "../head/item.h"
 using namespace std;
-#ifndef _ITEM_CPP_
-#define _ITEM_CPP_
+
 
 item::item(string id)
 {
@@ -87,4 +86,3 @@ int item::addSpecails(int id,int pos)
     return 0;
 }
 
-#endif

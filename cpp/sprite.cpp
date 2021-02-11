@@ -1,7 +1,6 @@
 #include "../head/sprite.h"
 using namespace std;
-#ifndef _SPRITE_CPP_
-#define _SPRITE_CPP_
+
 
 sprite::sprite()
 {
@@ -72,4 +71,4 @@ int sprite::getDEF()
     return DEF;
 }
 
-#endif
+

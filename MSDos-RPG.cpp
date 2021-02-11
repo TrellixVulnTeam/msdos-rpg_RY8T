@@ -1,20 +1,41 @@
-#include "includeme.h"
+//#include "includeme.h"
+#include<windows.h>
+#include<string>
+#include<cstdio>
+#include<cstdlib>
+#include<iostream>
+#include<cmath>
+#include<ctime>
+#include<fstream>
+#include<algorithm>
+#include<list>
+#include<stack>
+#include<queue>
+#include<map>
+#include<random>
+//#include<Python.h>
+#include "libs/python/include/Python.h"
+#include "libs/jsoncpp/include/json/json.h"
+#include "head/enemy.h"
+
+#define _CRT_SECURE_NO_WARNINGS
 #define fin cin
 #define fout cout
-#pragma comment(lib,"libs/python/libs/python3.lib")
-#pragma comment(lib,"libs/python/libs/python37.lib")
-#pragma comment(lib,"libs/python/libs/_tkinter.lib")
+//#pragma comment(lib,"libs/python/libs/python3.lib")
+//#pragma comment(lib,"libs/python/libs/python37.lib")
+//#pragma comment(lib,"libs/python/libs/_tkinter.lib")
 using namespace std;
 void GameInit();
 bool ctrlhandler(DWORD);
 void GameExit();
 void setPos(int, int);
+LPCWSTR stringToLPCWSTR(string);
 int randi(int, int);
 void rands();
 void listQuest();
 void intomap();
 const int events = 2;
-string title = "";
+string title = "MSDos-RPG Alpha 0.1";
 string sen = "欢迎来到这个MSDOS游戏!";
 player p;
 int prdm = 0;	//调用Python用
@@ -179,8 +200,8 @@ void intomap()
 
 void GameInit()
 {
-	ifstream inSets("settings.ini");
-	getline(inSets, title);
+	/*ifstream inSets("settings.ini");
+	getline(inSets, title);*/
 	string temps = "title ";
 	temps += title;
 	system("mode con cols=100 lines=30");
@@ -202,7 +223,9 @@ void GameInit()
 	}
 	else
 	{
-		MessageBox(NULL,TEXT("\nFatal致命错误:无法设置控件处理程序(Control Handler)\n"),TEXT(title.c_str()), MB_OK | MB_ICONERROR);
+	
+	
+		MessageBox(NULL,TEXT("\nFatal致命错误:无法设置控件处理程序(Control Handler)\n"), stringToLPCWSTR(title), MB_OK | MB_ICONERROR);
 		system("pause");
 		exit(1);
 	}
@@ -218,7 +241,7 @@ bool ctrlhandler(DWORD fdwctrltype)
 	case CTRL_C_EVENT:
 		//printf( "ctrl-c event\n\n" );
 		//GameExit();
-		MessageBox(NULL, TEXT("请不要使用Ctrl-C关闭游戏！"), TEXT(title.c_str()), MB_OK | MB_ICONWARNING);
+		MessageBox(NULL, TEXT("请不要使用Ctrl-C关闭游戏！"), stringToLPCWSTR(title), MB_OK | MB_ICONWARNING);
 		return false;
 
 	// ctrl-close: confirm that the user wants to exit.
@@ -231,7 +254,7 @@ bool ctrlhandler(DWORD fdwctrltype)
 	case CTRL_BREAK_EVENT:
 		//printf( "ctrl-break event\n\n" );
 		//GameExit();
-		MessageBox(NULL, TEXT("请不要强制退出游戏！"), TEXT(title.c_str()), MB_OK | MB_ICONWARNING);
+		MessageBox(NULL, TEXT("请不要强制退出游戏！"), stringToLPCWSTR(title), MB_OK | MB_ICONWARNING);
 		return false;
 
 	case CTRL_LOGOFF_EVENT:
@@ -290,9 +313,20 @@ void setPos(int x, int y) //设置光标位置
 	SetConsoleCursorPosition(hOutput, pos);
 }
 
+LPCWSTR stringToLPCWSTR(string orig)
+{
+	size_t origsize = orig.length() + 1;
+	const size_t newsize = 100;
+	size_t convertedChars = 0;
+	wchar_t* wcstring = (wchar_t*)malloc(sizeof(wchar_t) * (orig.length() - 1));
+	mbstowcs_s(&convertedChars, wcstring, origsize, orig.c_str(), _TRUNCATE);
+
+	return wcstring;
+}
+
 void GameExit()
 {
-	MessageBox(NULL, TEXT("正在退出游戏..."), TEXT(title.c_str()), MB_OK | MB_ICONINFORMATION);
+	MessageBox(NULL, TEXT("正在退出游戏..."), stringToLPCWSTR(title), MB_OK | MB_ICONINFORMATION);
 	//保存文件
 	ofstream fout("gamefile/SAVE.file");
 	fout << p.name << endl;

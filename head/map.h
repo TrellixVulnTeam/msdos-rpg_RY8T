@@ -3,12 +3,12 @@
 
 #include<string>
 using namespace std;
-class map
+class Map
 {  
     public:
-    map();
-    map(int,string,int,int,int*,int,int);
-    ~map();
+    Map();
+    Map(int,string,int,int,int*,int,int);
+    ~Map();
     int getPoint(int,int);
     int getID;
     string getName();

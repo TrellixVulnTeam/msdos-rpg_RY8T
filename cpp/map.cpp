@@ -1,15 +1,13 @@
-#ifndef _MAP_CPP_
-#define _MAP_CPP_
-
 #include "../head/map.h"
-using namespace std;
 
-map::map()
+
+using namespace std;
+Map::Map()
 {
 
 }
 
-map::map(int ID,string n,int acrs,int dn,int* m,int l,int ne)
+Map::Map(int ID,string n,int acrs,int dn,int* m,int l,int ne)
 {
     id = ID;
     name = n;
@@ -34,4 +32,3 @@ map::map(int ID,string n,int acrs,int dn,int* m,int l,int ne)
     mapp -= across*down;
 }
 
-#endif

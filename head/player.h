@@ -1,5 +1,7 @@
-#include "../cpp/sprite.cpp"
-#include "../cpp/item.cpp"
+#include "../head/sprite.h"
+#include "../head/item.h"
+#include<iostream>
+#include<cstdio>
 using namespace std;
 #ifndef _PLAYER_H_
 #define _PLAYER_H_
@@ -28,4 +30,5 @@ class player : public sprite
 
     string quests[100] = {"", "TestQuest", "NewQuest", "3", "4", "5", "quest6", "No.7", "8", "9", "10"};
 };
+
 #endif
