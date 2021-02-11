@@ -1,3 +1,4 @@
 
-*.file
+SAVE.file
+python.file
 *.ipch
