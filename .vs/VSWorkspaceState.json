@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\MSDos-RPG"
   ],
-  "SelectedNode": "\\MSDos-RPG.exe",
+  "SelectedNode": "\\MSDos-RPG\\MSDos-RPG.vcxproj",
   "PreviewInSolutionExplorer": false
 }

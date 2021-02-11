@@ -16,14 +16,18 @@
 //#include<Python.h>
 #include "libs/python/include/Python.h"
 #include "libs/jsoncpp/include/json/json.h"
+#include "head/sprite.h"
+#include "head/item.h"
+#include "head/map.h"
+#include "head/player.h"
 #include "head/enemy.h"
 
 #define _CRT_SECURE_NO_WARNINGS
 #define fin cin
 #define fout cout
-//#pragma comment(lib,"libs/python/libs/python3.lib")
-//#pragma comment(lib,"libs/python/libs/python37.lib")
-//#pragma comment(lib,"libs/python/libs/_tkinter.lib")
+#pragma comment(lib,"python3.lib")
+#pragma comment(lib,"python37.lib")
+#pragma comment(lib,"_tkinter.lib")
 using namespace std;
 void GameInit();
 bool ctrlhandler(DWORD);
@@ -42,9 +46,9 @@ int prdm = 0;	//调用Python用
 int *ip = NULL; //调用item的getAdds和getSpecails
 //Json::Reader reader;
 //Json::Value root;
-//PyObject *pMod = NULL;
-//PyObject *pFunc = NULL;
-//PyObject *result = NULL;
+PyObject *pMod = NULL;
+PyObject *pFunc = NULL;
+PyObject *result = NULL;
 int main()
 {
 	GameInit();
@@ -218,8 +222,6 @@ void GameInit()
         */
 		/*while( 1 ){ Sleep(100);}*/
 		printf("Control Hanler启动成功!\n");
-		Sleep(300);
-		system("cls");
 	}
 	else
 	{
@@ -229,8 +231,34 @@ void GameInit()
 		system("pause");
 		exit(1);
 	}
-	//Py_Initialize();
-	//pMod = PyImport_ImportModule("rand");
+	/*Py_Initialize();
+	PyRun_SimpleString("import encodings");
+	PyRun_SimpleString("import sys");
+	PyRun_SimpleString("sys.path.append('./')");
+	if (!Py_IsInitialized())
+	{
+		MessageBox(NULL, TEXT("\nFatal致命错误:无法启动Python(Py_Initialize)\n"), stringToLPCWSTR(title), MB_OK | MB_ICONERROR);
+		system("pause");
+		exit(1);
+	}
+	else
+	{
+		printf("Python启动成功!\n");
+	}
+	pMod = PyImport_ImportModule("json");
+	if (!pMod)
+	{
+		MessageBox(NULL, TEXT("\nFatal致命错误:无法找到Python库(json)\n"), stringToLPCWSTR(title), MB_OK | MB_ICONERROR);
+		system("pause");
+		exit(1);
+	}
+	else
+		printf("成功打开Python库!\n");*/
+	//system("dir");
+	system("python jsonReader.py");
+	system("pause");
+	Sleep(300);
+	system("cls");
 }
 
 bool ctrlhandler(DWORD fdwctrltype)
@@ -336,6 +364,6 @@ void GameExit()
 	}
 	fout.close();
 #define fout cout
-	//Py_Finalize();
+	Py_Finalize();
 	exit(0);
 }
