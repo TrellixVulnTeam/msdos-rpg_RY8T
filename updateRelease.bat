@@ -1,0 +1,1 @@
+copy -b MSDos-RPG.exe  -b Release\MSDos-RPG.exe

@@ -204,8 +204,8 @@ void intomap()
 
 void GameInit()
 {
-	/*ifstream inSets("settings.ini");
-	getline(inSets, title);*/
+	ifstream inSets("../settings.ini");
+	/*getline(inSets, title);*/
 	string temps = "title ";
 	temps += title;
 	system("mode con cols=100 lines=30");
@@ -225,8 +225,6 @@ void GameInit()
 	}
 	else
 	{
-	
-	
 		MessageBox(NULL,TEXT("\nFatal致命错误:无法设置控件处理程序(Control Handler)\n"), stringToLPCWSTR(title), MB_OK | MB_ICONERROR);
 		system("pause");
 		exit(1);
@@ -256,8 +254,30 @@ void GameInit()
 		printf("成功打开Python库!\n");*/
 	//system("dir");
 	system("python jsonReader.py");
-	system("pause");
+	system("python updateChecker.py");
+	ifstream pf("python.file");
+	string verp;
+	string ver;
+	bool isNew;
+	getline(pf, verp);
+	//cout << verp << endl;
+	pf.close();
+	getline(inSets, ver);
+	//cout << ver << endl;
+	if (verp == ver)
+	{
+		isNew = true;
+		printf("版本检查成功！\n");
+	}
+	else
+	{
+		isNew = false;
+		MessageBox(NULL, TEXT("当前存在新版本！\n请前往Github或Gitee下载新版本！"), stringToLPCWSTR(title), MB_OK | MB_ICONWARNING);
+	}
+	//cout << isNew << endl;
+	//system("pause");
 	Sleep(300);
+	inSets.close();
 	system("cls");
 }
 
