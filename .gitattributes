@@ -2,6 +2,3 @@
 * text=auto
 *.py linguist-language=cpp
 *.pyc linguist-language=python
-*.db filter=lfs diff=lfs merge=lfs -text
-*.ipch filter=lfs diff=lfs merge=lfs -text
-*.sqlite filter=lfs diff=lfs merge=lfs -text

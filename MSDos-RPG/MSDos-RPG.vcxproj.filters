@@ -55,6 +55,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\gamefile\jsonReader.py" />
+    <None Include="jsonReader.py" />
+    <None Include="updateChecker.py" />
   </ItemGroup>
 </Project>

@@ -253,8 +253,8 @@ void GameInit()
 	else
 		printf("成功打开Python库!\n");*/
 	//system("dir");
-	system("python jsonReader.py");
-	system("python updateChecker.py");
+	system("..\\\\libs\\\\python\\\\python.exe jsonReader.py");
+	system("..\\\\libs\\\\python\\\\python.exe updateChecker.py");
 	ifstream pf("python.file");
 	string verp;
 	string ver;
