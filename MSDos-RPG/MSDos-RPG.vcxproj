@@ -95,9 +95,9 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <LibraryPath>C:\Users\lenovo\Documents\Github\msdos-rpg\libs\python;C:\Users\lenovo\Documents\Github\msdos-rpg\libs\python\libs;$(LibraryPath)</LibraryPath>
-    <IncludePath>C:\Users\lenovo\Documents\Github\msdos-rpg\libs\python\include;C:\Users\lenovo\Documents\Github\msdos-rpg\libs\jsoncpp\include;$(IncludePath)</IncludePath>
-    <ReferencePath>C:\Users\lenovo\Documents\Github\msdos-rpg\libs\python\libs;C:\Users\lenovo\Documents\Github\msdos-rpg\libs\python;$(ReferencePath)</ReferencePath>
+    <LibraryPath>D:\Users\Administrator\Documents\GitHub\msdos-rpg\libs\python\libs;D:\Users\Administrator\Documents\GitHub\msdos-rpg\libs\python;C:\Users\lenovo\Documents\Github\msdos-rpg\libs\python;C:\Users\lenovo\Documents\Github\msdos-rpg\libs\python\libs;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\lenovo\Documents\Github\msdos-rpg\libs\jsoncpp\include;D:\Users\Administrator\Documents\GitHub\msdos-rpg\libs\python\include;D:\Users\Administrator\Documents\GitHub\msdos-rpg\libs\jsoncpp\include;C:\Users\lenovo\Documents\Github\msdos-rpg\libs\python\include;$(IncludePath)</IncludePath>
+    <ReferencePath>C:\Users\lenovo\Documents\Github\msdos-rpg\libs\python\libs;D:\Users\Administrator\Documents\GitHub\msdos-rpg\libs\python\libs;D:\Users\Administrator\Documents\GitHub\msdos-rpg\libs\python;C:\Users\lenovo\Documents\Github\msdos-rpg\libs\python;$(ReferencePath)</ReferencePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
