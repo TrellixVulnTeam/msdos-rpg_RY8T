@@ -1,13 +1,13 @@
 ﻿  MSDos-RPG.cpp
-D:\Users\Administrator\Documents\GitHub\msdos-rpg\MSDos-RPG.cpp(49,7): warning C4996: 'Json::Reader': Use CharReader and CharReaderBuilder instead.
-D:\Users\Administrator\Documents\GitHub\msdos-rpg\MSDos-RPG.cpp(49,14): warning C4996: 'Json::Reader::Reader': Use CharReader and CharReaderBuilder instead
-D:\Users\Administrator\Documents\GitHub\msdos-rpg\MSDos-RPG.cpp(76,20): warning C4018: “<”: 有符号/无符号不匹配
-D:\Users\Administrator\Documents\GitHub\msdos-rpg\MSDos-RPG.cpp(92,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-D:\Users\Administrator\Documents\GitHub\msdos-rpg\MSDos-RPG.cpp(187,14): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
-D:\Users\Administrator\Documents\GitHub\msdos-rpg\MSDos-RPG.cpp(173,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-D:\Users\Administrator\Documents\GitHub\msdos-rpg\MSDos-RPG.cpp(179,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-D:\Users\Administrator\Documents\GitHub\msdos-rpg\MSDos-RPG.cpp(350,12): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
-MSDos-RPG.obj : error LNK2001: 无法解析的外部符号 "public: __thiscall Json::Value::~Value(void)" (??1Value@Json@@QAE@XZ)
-MSDos-RPG.obj : error LNK2001: 无法解析的外部符号 "public: __thiscall Json::Value::Value(enum Json::ValueType)" (??0Value@Json@@QAE@W4ValueType@1@@Z)
-MSDos-RPG.obj : error LNK2001: 无法解析的外部符号 "public: __thiscall Json::Reader::Reader(void)" (??0Reader@Json@@QAE@XZ)
-D:\Users\Administrator\Documents\GitHub\msdos-rpg\MSDos-RPG\Release\MSDos-RPG.exe : fatal error LNK1120: 3 个无法解析的外部命令
+d:\Users\Administrator\Documents\GitHub\msdos-rpg\MSDos-RPG.cpp(59,20): warning C4018: “<”: 有符号/无符号不匹配
+d:\Users\Administrator\Documents\GitHub\msdos-rpg\MSDos-RPG.cpp(75,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+d:\Users\Administrator\Documents\GitHub\msdos-rpg\MSDos-RPG.cpp(170,14): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+d:\Users\Administrator\Documents\GitHub\msdos-rpg\MSDos-RPG.cpp(156,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+d:\Users\Administrator\Documents\GitHub\msdos-rpg\MSDos-RPG.cpp(162,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+d:\Users\Administrator\Documents\GitHub\msdos-rpg\MSDos-RPG.cpp(351,12): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+  正在生成代码
+  2 of 239 functions ( 0.8%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    6 functions had inline decision re-evaluated but remain unchanged
+  已完成代码的生成
+  MSDos-RPG.vcxproj -> d:\Users\Administrator\Documents\GitHub\msdos-rpg\MSDos-RPG\Release\MSDos-RPG.exe

@@ -1,29 +1,4 @@
-//#include "includeme.h"
-#include<windows.h>
-#include<string>
-#include<cstdio>
-#include<cstdlib>
-#include<iostream>
-#include<cmath>
-#include<ctime>
-#include<fstream>
-#include<algorithm>
-#include<list>
-#include<stack>
-#include<queue>
-#include<map>
-#include<random>
-//#include<Python.h>
-//#include "libs/python/include/Python.h"
-//#include "libs/jsoncpp/include/json/json.h"
-#include<Python.h>
-#include<json/json.h>
-#include "head/sprite.h"
-#include "head/item.h"
-#include "head/map.h"
-#include "head/player.h"
-#include "head/enemy.h"
-
+#include "includeme.h"
 #define _CRT_SECURE_NO_WARNINGS
 #define fin cin
 #define fout cout
@@ -31,7 +6,7 @@
 #pragma comment(lib,"python37.lib")
 #pragma comment(lib,"_tkinter.lib")
 using namespace std;
-void GameInit();
+void GameInit(string);
 bool ctrlhandler(DWORD);
 void GameExit();
 void setPos(int, int);
@@ -41,7 +16,8 @@ void rands();
 void listQuest();
 void intomap();
 const int events = 2;
-string title = "MSDos-RPG Alpha 0.1";
+int debugType;
+string title = "MSDos-RPG Alpha 0.1.1";
 string sen = "欢迎来到这个MSDOS游戏!";
 player p;
 int prdm = 0;	//调用Python用
@@ -51,9 +27,16 @@ int *ip = NULL; //调用item的getAdds和getSpecails
 PyObject *pMod = NULL;
 PyObject *pFunc = NULL;
 PyObject *result = NULL;
-int main()
+int main(int argc, char* argv[])
 {
-	GameInit();
+	if (argc > 1)
+	{
+		GameInit(argv[1]);
+	}
+	else
+	{
+		GameInit(argv[0]);
+	}
 	string temps;
 	int tempi;
 	int stat;
@@ -204,8 +187,13 @@ void intomap()
 	}
 }
 
-void GameInit()
+void GameInit(string arg)
 {
+	if (arg == "--debug")
+	{
+		debugType = 1;
+		title += " --debug";
+	}
 	ifstream inSets("../settings.ini");
 	/*getline(inSets, title);*/
 	string temps = "title ";
@@ -231,7 +219,7 @@ void GameInit()
 		system("pause");
 		exit(1);
 	}
-	/*Py_Initialize();
+	Py_Initialize();
 	PyRun_SimpleString("import encodings");
 	PyRun_SimpleString("import sys");
 	PyRun_SimpleString("sys.path.append('./')");
@@ -245,18 +233,31 @@ void GameInit()
 	{
 		printf("Python启动成功!\n");
 	}
-	pMod = PyImport_ImportModule("json");
+	pMod = PyImport_ImportModule("updateChecker");
 	if (!pMod)
 	{
-		MessageBox(NULL, TEXT("\nFatal致命错误:无法找到Python库(json)\n"), stringToLPCWSTR(title), MB_OK | MB_ICONERROR);
+		MessageBox(NULL, TEXT("\nFatal致命错误:无法找到Python库(updateChecker)！\n尝试重新安装软件以解决这个错误！"), stringToLPCWSTR(title), MB_OK | MB_ICONERROR);
 		system("pause");
 		exit(1);
 	}
 	else
-		printf("成功打开Python库!\n");*/
+	{
+		printf("成功打开Python库(updateChecker)!\n");
+	}
+	pMod = PyImport_ImportModule("jsonReader");
+	if (!pMod)
+	{
+		MessageBox(NULL, TEXT("\nFatal致命错误:无法找到Python库(jsonReader)！\n尝试重新安装软件以解决这个错误！"), stringToLPCWSTR(title), MB_OK | MB_ICONERROR);
+		system("pause");
+		exit(1);
+	}
+	else
+	{
+		printf("成功打开Python库(jsonReader)!\n");
+	}
 	//system("dir");
-	system("..\\\\libs\\\\python\\\\python.exe jsonReader.py");
-	system("..\\\\libs\\\\python\\\\python.exe updateChecker.py");
+	/*system("..\\\\libs\\\\python\\\\python.exe jsonReader.py");
+	system("..\\\\libs\\\\python\\\\python.exe updateChecker.py");*/
 	ifstream pf("python.file");
 	string verp;
 	string ver;

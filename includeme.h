@@ -15,8 +15,11 @@
 #include<queue>
 #include<map>
 #include<random>
-//#include<Python.h>
-#include "libs/python/include/Python.h"
-#include "libs/jsoncpp/include/json/json.h"
+#include<Python.h>
+#include<json/json.h>
+#include "head/sprite.h"
+#include "head/player.h"
 #include "head/enemy.h"
+#include "head/item.h"
+#include "head/map.h"
 #endif
