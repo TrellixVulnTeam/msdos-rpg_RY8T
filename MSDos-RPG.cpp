@@ -6,11 +6,11 @@
 #pragma comment(lib,"python37.lib")
 #pragma comment(lib,"_tkinter.lib")
 using namespace std;
+using namespace gen;
 void GameInit(string);
 bool ctrlhandler(DWORD);
 void GameExit();
 void setPos(int, int);
-LPCWSTR stringToLPCWSTR(string);
 int randi(int, int);
 void rands();
 void listQuest();
@@ -97,6 +97,7 @@ int main(int argc, char* argv[])
 			fout.close();
 			#define fout cout
 			exit(0);*/
+			release::safeExit(0,debugType);
 			GameExit();
 		}
 		else
@@ -189,15 +190,20 @@ void intomap()
 
 void GameInit(string arg)
 {
+	using namespace gen;
 	if (arg == "--debug")
 	{
 		debugType = 1;
-		title += " --debug";
 	}
+	logInit();
 	ifstream inSets("../settings.ini");
 	/*getline(inSets, title);*/
 	string temps = "title ";
 	temps += title;
+	if (debugType == 1)
+	{
+		temps += " --debug";
+	}
 	system("mode con cols=100 lines=30");
 	system(temps.c_str());
 	printf("正在启动游戏...\n");
@@ -216,6 +222,7 @@ void GameInit(string arg)
 	else
 	{
 		MessageBox(NULL,TEXT("\nFatal致命错误:无法设置控件处理程序(Control Handler)\n"), stringToLPCWSTR(title), MB_OK | MB_ICONERROR);
+		//msgbox("Fatal致命错误:无法设置控件处理程序(Control Handler)\n", MB_OK | MB_ICONERROR);
 		system("pause");
 		exit(1);
 	}
@@ -226,6 +233,7 @@ void GameInit(string arg)
 	if (!Py_IsInitialized())
 	{
 		MessageBox(NULL, TEXT("\nFatal致命错误:无法启动Python(Py_Initialize)\n"), stringToLPCWSTR(title), MB_OK | MB_ICONERROR);
+		//msgbox("Fatal致命错误:无法启动Python(Py_Initialize)\n", MB_OK | MB_ICONERROR);
 		system("pause");
 		exit(1);
 	}
@@ -237,6 +245,7 @@ void GameInit(string arg)
 	if (!pMod)
 	{
 		MessageBox(NULL, TEXT("\nFatal致命错误:无法找到Python库(updateChecker)！\n尝试重新安装软件以解决这个错误！"), stringToLPCWSTR(title), MB_OK | MB_ICONERROR);
+		//msgbox("Fatal致命错误:无法找到Python库(updateChecker)！\n尝试重新安装软件以解决这个错误！\n", MB_OK | MB_ICONERROR);
 		system("pause");
 		exit(1);
 	}
@@ -248,6 +257,7 @@ void GameInit(string arg)
 	if (!pMod)
 	{
 		MessageBox(NULL, TEXT("\nFatal致命错误:无法找到Python库(jsonReader)！\n尝试重新安装软件以解决这个错误！"), stringToLPCWSTR(title), MB_OK | MB_ICONERROR);
+		//msgbox("Fatal致命错误:无法找到Python库(jsonReader)！\n尝试重新安装软件以解决这个错误！\n", MB_OK | MB_ICONERROR);
 		system("pause");
 		exit(1);
 	}
@@ -276,6 +286,7 @@ void GameInit(string arg)
 	{
 		isNew = false;
 		MessageBox(NULL, TEXT("当前存在新版本！\n请前往Github或Gitee下载新版本！"), stringToLPCWSTR(title), MB_OK | MB_ICONWARNING);
+		//msgbox("当前存在新版本！\n请前往Github或Gitee下载新版本！\n", MB_OK | MB_ICONWARNING);
 	}
 	//cout << isNew << endl;
 	//system("pause");
@@ -293,11 +304,13 @@ bool ctrlhandler(DWORD fdwctrltype)
 		//printf( "ctrl-c event\n\n" );
 		//GameExit();
 		MessageBox(NULL, TEXT("请不要使用Ctrl-C关闭游戏！"), stringToLPCWSTR(title), MB_OK | MB_ICONWARNING);
+		//msgbox("请不要使用Ctrl-C关闭游戏！\n", MB_OK | MB_ICONWARNING);
 		return false;
 
 	// ctrl-close: confirm that the user wants to exit.
 	case CTRL_CLOSE_EVENT:
 		//printf( "ctrl-close event\n\n" );
+		release::safeExit(1,debugType);
 		GameExit();
 		return true;
 
@@ -306,14 +319,17 @@ bool ctrlhandler(DWORD fdwctrltype)
 		//printf( "ctrl-break event\n\n" );
 		//GameExit();
 		MessageBox(NULL, TEXT("请不要强制退出游戏！"), stringToLPCWSTR(title), MB_OK | MB_ICONWARNING);
+		//msgbox("请不要强制退出游戏！\n", MB_OK | MB_ICONWARNING);
 		return false;
 
 	case CTRL_LOGOFF_EVENT:
 		//printf( "ctrl-logoff event\n\n" );
+		release::safeExit(2, debugType);
 		GameExit();
 		return false;
 
 	case CTRL_SHUTDOWN_EVENT:
+		release::safeExit(2, debugType);
 		//printf( "ctrl-shutdown event\n\n" );
 		GameExit();
 		return false;
@@ -364,29 +380,18 @@ void setPos(int x, int y) //设置光标位置
 	SetConsoleCursorPosition(hOutput, pos);
 }
 
-LPCWSTR stringToLPCWSTR(string orig)
-{
-	size_t origsize = orig.length() + 1;
-	const size_t newsize = 100;
-	size_t convertedChars = 0;
-	wchar_t* wcstring = (wchar_t*)malloc(sizeof(wchar_t) * (orig.length() - 1));
-	mbstowcs_s(&convertedChars, wcstring, origsize, orig.c_str(), _TRUNCATE);
-
-	return wcstring;
-}
-
 void GameExit()
 {
 	MessageBox(NULL, TEXT("正在退出游戏..."), stringToLPCWSTR(title), MB_OK | MB_ICONINFORMATION);
+	//msgbox("正在退出游戏...\n", MB_OK | MB_ICONINFORMATION);
 	//保存文件
-	ofstream fout("gamefile/SAVE.file");
-	fout << p.name << endl;
+	ofstream save("gamefile/SAVE.file");
+	save << p.name << endl;
 	for (int i = 0; i < 15; i++)
 	{
-		fout << p.questf(i) << " ";
+		save << p.questf(i) << " ";
 	}
-	fout.close();
-#define fout cout
+	save.close();
 	Py_Finalize();
 	exit(0);
 }

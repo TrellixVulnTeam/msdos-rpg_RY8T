@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\cpp\debugs.cpp" />
     <ClCompile Include="..\cpp\enemy.cpp" />
     <ClCompile Include="..\cpp\item.cpp" />
     <ClCompile Include="..\cpp\map.cpp" />
@@ -27,12 +28,17 @@
     <ClCompile Include="..\MSDos-RPG.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\head\debugs.h" />
     <ClInclude Include="..\head\enemy.h" />
     <ClInclude Include="..\head\item.h" />
     <ClInclude Include="..\head\map.h" />
     <ClInclude Include="..\head\player.h" />
     <ClInclude Include="..\head\sprite.h" />
     <ClInclude Include="..\includeme.h" />
+    <ClInclude Include="..\libs\vcmd\vcmd.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\libs\vcmd\vcmdH.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="jsonReader.py" />

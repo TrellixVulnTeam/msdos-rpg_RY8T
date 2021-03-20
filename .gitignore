@@ -1,4 +1,5 @@
 
 SAVE.file
 python.file
+*.log
 *.ipch

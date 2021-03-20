@@ -16,10 +16,12 @@
 #include<map>
 #include<random>
 #include<Python.h>
+//#include "libs/vcmd/vcmdH.h"
 #include<json/json.h>
 #include "head/sprite.h"
 #include "head/player.h"
 #include "head/enemy.h"
 #include "head/item.h"
 #include "head/map.h"
+#include "head/debugs.h"
 #endif

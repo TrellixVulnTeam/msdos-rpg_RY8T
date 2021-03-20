@@ -33,6 +33,9 @@
     <ClCompile Include="..\MSDos-RPG.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="..\cpp\debugs.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\head\enemy.h">
@@ -51,6 +54,15 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\includeme.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\head\debugs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\vcmd\vcmd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\vcmd\vcmdH.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
