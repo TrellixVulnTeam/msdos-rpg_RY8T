@@ -2,9 +2,9 @@
 #define _CRT_SECURE_NO_WARNINGS
 #define fin cin
 #define fout cout
-#pragma comment(lib,"python3.lib")
-#pragma comment(lib,"python37.lib")
-#pragma comment(lib,"_tkinter.lib")
+//#pragma comment(lib,"python3.lib")
+//#pragma comment(lib,"python37.lib")
+//#pragma comment(lib,"_tkinter.lib")
 using namespace std;
 using namespace gen;
 void GameInit(string);
@@ -24,9 +24,9 @@ int prdm = 0;	//调用Python用
 int *ip = NULL; //调用item的getAdds和getSpecails
 //Json::Reader reader;
 //Json::Value root;
-PyObject *pMod = NULL;
-PyObject *pFunc = NULL;
-PyObject *result = NULL;
+//PyObject *pMod = NULL;
+//PyObject *pFunc = NULL;
+//PyObject *result = NULL;
 int main(int argc, char* argv[])
 {
 	if (argc > 1)
@@ -40,6 +40,7 @@ int main(int argc, char* argv[])
 	string temps;
 	int tempi;
 	int stat;
+	system("cls");
 	printf("请输入玩家名!\n");
 	getline(cin, temps);
 	//p.setName(temps);
@@ -226,11 +227,11 @@ void GameInit(string arg)
 		system("pause");
 		exit(1);
 	}
-	Py_Initialize();
-	PyRun_SimpleString("import encodings");
-	PyRun_SimpleString("import sys");
-	PyRun_SimpleString("sys.path.append('./')");
-	if (!Py_IsInitialized())
+	//Py_Initialize();
+	//PyRun_SimpleString("import encodings");
+	//PyRun_SimpleString("import sys");
+	//PyRun_SimpleString("sys.path.append('./')");
+	/*if (!Py_IsInitialized())
 	{
 		MessageBox(NULL, TEXT("\nFatal致命错误:无法启动Python(Py_Initialize)\n"), stringToLPCWSTR(title), MB_OK | MB_ICONERROR);
 		//msgbox("Fatal致命错误:无法启动Python(Py_Initialize)\n", MB_OK | MB_ICONERROR);
@@ -268,7 +269,7 @@ void GameInit(string arg)
 	//system("dir");
 	/*system("..\\\\libs\\\\python\\\\python.exe jsonReader.py");
 	system("..\\\\libs\\\\python\\\\python.exe updateChecker.py");*/
-	ifstream pf("python.file");
+	/*ifstream pf("python.file");
 	string verp;
 	string ver;
 	bool isNew;
@@ -292,7 +293,7 @@ void GameInit(string arg)
 	//system("pause");
 	Sleep(300);
 	inSets.close();
-	system("cls");
+	system("cls");*/
 }
 
 bool ctrlhandler(DWORD fdwctrltype)
@@ -392,6 +393,6 @@ void GameExit()
 		save << p.questf(i) << " ";
 	}
 	save.close();
-	Py_Finalize();
+	//Py_Finalize();
 	exit(0);
 }

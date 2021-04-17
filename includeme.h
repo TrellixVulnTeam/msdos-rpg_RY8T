@@ -15,7 +15,7 @@
 #include<queue>
 #include<map>
 #include<random>
-#include<Python.h>
+//#include<Python.h>
 //#include "libs/vcmd/vcmdH.h"
 #include<json/json.h>
 #include "head/sprite.h"

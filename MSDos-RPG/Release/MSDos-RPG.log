@@ -1,10 +1,13 @@
-﻿  debugs.cpp
-d:\Users\Administrator\Documents\GitHub\msdos-rpg\cpp\debugs.cpp(35,14): warning C4996: 'ctime': This function or variable may be unsafe. Consider using ctime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-d:\Users\Administrator\Documents\GitHub\msdos-rpg\cpp\debugs.cpp(57,13): warning C4309: “参数”: 截断常量值
-d:\Users\Administrator\Documents\GitHub\msdos-rpg\cpp\debugs.cpp(63,14): warning C4996: 'ctime': This function or variable may be unsafe. Consider using ctime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+﻿  MSDos-RPG.cpp
+d:\Users\Administrator\Documents\GitHub\msdos-rpg\MSDos-RPG.cpp(60,20): warning C4018: “<”: 有符号/无符号不匹配
+d:\Users\Administrator\Documents\GitHub\msdos-rpg\MSDos-RPG.cpp(76,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+d:\Users\Administrator\Documents\GitHub\msdos-rpg\MSDos-RPG.cpp(172,14): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+d:\Users\Administrator\Documents\GitHub\msdos-rpg\MSDos-RPG.cpp(158,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+d:\Users\Administrator\Documents\GitHub\msdos-rpg\MSDos-RPG.cpp(164,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+d:\Users\Administrator\Documents\GitHub\msdos-rpg\MSDos-RPG.cpp(368,12): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
   正在生成代码
-  28 of 376 functions ( 7.4%) were compiled, the rest were copied from previous compilation.
-    2 functions were new in current compilation
-    69 functions had inline decision re-evaluated but remain unchanged
+  1 of 376 functions ( 0.3%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
   已完成代码的生成
   MSDos-RPG.vcxproj -> d:\Users\Administrator\Documents\GitHub\msdos-rpg\MSDos-RPG\Release\MSDos-RPG.exe
