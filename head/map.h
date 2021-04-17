@@ -7,7 +7,7 @@ class Map
 {  
     public:
     Map();
-    Map(int,string,int,int,int*,int,int);
+    Map(int,string,int,int,int[],int,int);
     ~Map();
     int getPoint(int,int);
     int getID;

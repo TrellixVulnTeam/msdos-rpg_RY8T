@@ -65,6 +65,9 @@
     <ClInclude Include="..\libs\vcmd\vcmdH.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="..\pre-load.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="jsonReader.py" />

@@ -39,6 +39,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="..\libs\vcmd\vcmdH.h" />
+    <ClInclude Include="..\pre-load.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="jsonReader.py" />

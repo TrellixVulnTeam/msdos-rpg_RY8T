@@ -7,7 +7,7 @@ Map::Map()
 
 }
 
-Map::Map(int ID,string n,int acrs,int dn,int* m,int l,int ne)
+Map::Map(int ID,string n,int acrs,int dn,int m[],int l,int ne)
 {
     id = ID;
     name = n;
@@ -15,7 +15,7 @@ Map::Map(int ID,string n,int acrs,int dn,int* m,int l,int ne)
     down = dn;
     lastID = l;
     nextID = ne;
-    mapp = new int[across*down];
+    /*mapp = new int[across*down];
     for(int i=0;i<down;i++)
     {
         for(int j=0;j<across;j++)
@@ -29,6 +29,18 @@ Map::Map(int ID,string n,int acrs,int dn,int* m,int l,int ne)
             mapp++;
         }
     }
-    mapp -= across*down;
+    mapp -= across*down;*/
+    for(int i=0;i<down;i++)
+    {
+        for(int j=0;j<across;j++)
+        {
+            if(m[i*across+j] == 8)
+            {
+                pposx = j;
+                pposy = i;
+            }
+            mapp++;
+        }
+    }
 }
 
