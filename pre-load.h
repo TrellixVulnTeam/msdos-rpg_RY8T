@@ -9,9 +9,9 @@
 #include "head/sprite.h"
 #include "head/player.h"
 using namespace std;
-void preloadTestMap()
+Map preloadTestMap()
 {
-	int Tmap[10][10] = { 0,0,0,0,0,0,9,0,0,0,
+	int Tmap[10*10] = { 0,0,0,0,0,0,9,0,0,0,
 						0,0,0,0,0,0,0,0,0,0,
 						0,0,0,0,0,0,0,0,0,0,
 						0,0,0,0,0,0,0,0,0,0,
@@ -22,5 +22,6 @@ void preloadTestMap()
 						0,0,0,0,0,0,0,0,0,0,
 						0,0,0,0,0,8,0,0,0,0 };
 	Map TestMap(-1, "Test Map", 10, 10, Tmap, -1, -1);
+	return TestMap;
 }
 #endif // !_PRE_LOAD_H_

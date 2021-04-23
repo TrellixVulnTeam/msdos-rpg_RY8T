@@ -24,4 +24,5 @@
 #include "head/item.h"
 #include "head/map.h"
 #include "head/debugs.h"
+#include "pre-load.h"
 #endif

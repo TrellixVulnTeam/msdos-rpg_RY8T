@@ -20,6 +20,7 @@ int debugType;
 string title = "MSDos-RPG Alpha 0.1.1";
 string sen = "欢迎来到这个MSDOS游戏!";
 player p;
+map<string, Map> MapTable;
 int prdm = 0;	//调用Python用
 int *ip = NULL; //调用item的getAdds和getSpecails
 //Json::Reader reader;
@@ -158,24 +159,27 @@ void intomap()
 	scanf("%d", &stat);
 	if (stat == -1)
 	{
-		//进入测试地图
-		printf("0、退出\n1、前\n2、后\n3、左\n4、右\n");
-		printf("请输入操作");
-		scanf("%d", &stat);
-		if (stat == 0)
+		while (1)
 		{
-			return;
-		}
-		else if (!(stat > 4))
-		{
-			//刷怪
-			srand(time(NULL));
-			rdm = rand();
-			tempi = rdm % events;
-		}
-		else
-		{
-			printf("错误的操作符！");
+			//进入测试地图
+			printf("0、退出\n1、前\n2、后\n3、左\n4、右\n");
+			printf("请输入操作");
+			scanf("%d", &stat);
+			if (stat == 0)
+			{
+				break;
+			}
+			else if (!(stat > 4))
+			{
+				//刷怪
+				srand(time(NULL));
+				rdm = rand();
+				tempi = rdm % events;
+			}
+			else
+			{
+				printf("错误的操作符！");
+			}
 		}
 	}
 	else if (stat == 0)
@@ -209,6 +213,7 @@ void GameInit(string arg)
 	system(temps.c_str());
 	printf("正在启动游戏...\n");
 	Sleep(500);
+	MapTable["TempMap"] = preloadTestMap();
 	if (SetConsoleCtrlHandler((PHANDLER_ROUTINE)ctrlhandler, true))
 	{
 		/*
