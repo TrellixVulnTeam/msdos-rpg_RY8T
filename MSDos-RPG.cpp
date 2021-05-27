@@ -16,11 +16,7 @@ void rands();
 void listQuest();
 void intomap();
 const int events = 2;
-int debugType;
-string title = "MSDos-RPG Alpha 0.1.1";
 string sen = "欢迎来到这个MSDOS游戏!";
-player p;
-map<string, Map> MapTable;
 int prdm = 0;	//调用Python用
 int *ip = NULL; //调用item的getAdds和getSpecails
 //Json::Reader reader;

@@ -30,6 +30,7 @@
   <ItemGroup>
     <ClInclude Include="..\head\debugs.h" />
     <ClInclude Include="..\head\enemy.h" />
+    <ClInclude Include="..\head\gen.h" />
     <ClInclude Include="..\head\item.h" />
     <ClInclude Include="..\head\map.h" />
     <ClInclude Include="..\head\player.h" />
